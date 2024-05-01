@@ -42,7 +42,7 @@ console.log(typeof  c);
 
 let name = prompt("Як вас звати? Введіть своє ім'я..");
 let nameMiddle = prompt('Як вас називають по-батькові? Введіть свою відповідь..');
-let age = prompt('Скільки вам років? Введіть свій вік..');
+let age = +prompt('Скільки вам років? Введіть свій вік..');
 console.log(name);
 console.log(nameMiddle);
 console.log(age);
