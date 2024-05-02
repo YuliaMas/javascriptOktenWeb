@@ -1,8 +1,9 @@
 // Масиви та об'єкти:
 // - Створити масив, наповнити його 10 елементами будь-якого типу, вивести кожен елемент в консоль
 
-let array_1 = ["like", 10, true, "sun", {name: 'Yuliya'}, "good day", [11, 22, 33], ['name','lastname']
-, null, 1]
+let array_1 =
+    ["like", 10, true, "sun", {name: 'Yuliya'}, "good day", [11, 22, 33], ['name','lastname'], null, 1];
+
 console.log(array_1);
 console.log(array_1[0]);
 console.log(array_1[1]);
@@ -45,9 +46,24 @@ const book_Da_Vinci_Code= {
 // - Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre, authors. Поле "автори" -
 // являється  масивом. Кожен автор має поля name та age.
 
-book_Harry_Potter.authors = [ {name : "J.K.Rowling"}, { age: 58} ];
-book_Inferno.authors = [ {name : "Den Braun"}, { age: 59} ];
-book_Da_Vinci_Code.authors = [ {name : "Den Braun"}, { age: 59} ];
+book_Harry_Potter.authors = [
+    {
+        name : "J.K.Rowling",
+        age: 58
+    }
+];
+book_Inferno.authors = [
+    {
+        name : "Den Braun",
+        age: 59
+    }
+];
+book_Da_Vinci_Code.authors = [
+    {
+        name : "Den Braun",
+        age: 59
+    }
+];
 
 console.log(book_Harry_Potter);
 console.log(book_Inferno);
@@ -124,43 +140,57 @@ console.log(user[user.length-1].password);
 
 // - описати масив, в якому буде зберігатись інформація про температуру вранці, вдень і ввечері за термін в 7 днів.
 //     Як зробити цей масив - вам потрібно подумати. Нормальних варіантів опису - 2. Варіант, коли в вас буде одновимірний
-// масив з 21 значенням вичключаємо одразу
+// масив з 21 значенням виключаємо одразу
 
 const temperatureForecast = [
-    { id: "Monday",
-        tempMorning: 10,
-        tempDay: 20,
-        tempEvening: 15,
+    { "Monday":
+            {
+                tempMorning: 10,
+                tempDay: 20,
+                tempEvening: 15,
+            }
     },
-    { id: "Tuesday",
-        tempMorning: 15,
-        tempDay: 24,
-        tempEvening: 18,
+    { "Tuesday":
+            {
+                tempMorning: 15,
+                tempDay: 24,
+                tempEvening: 18,
+            }
     },
-    { id: "Wednesday",
-        tempMorning: 8,
-        tempDay: 16,
-        tempEvening: 12,
+    { "Wednesday":
+            {
+                tempMorning: 8,
+                tempDay: 16,
+                tempEvening: 12,
+             }
     },
-    { id: "Thursday",
-        tempMorning: 8,
-        tempDay: 18,
-        tempEvening: 15,
+    { "Thursday":
+            {
+                tempMorning: 8,
+                tempDay: 18,
+                tempEvening: 15,
+             }
     },
-    { id: "Friday",
-        tempMorning: 15,
-        tempDay: 24,
-        tempEvening: 19,
+    { "Friday":
+            {
+                tempMorning: 15,
+                tempDay: 24,
+                tempEvening: 19,
+            }
     },
-    { id: "Saturday",
-        tempMorning: 17,
-        tempDay: 25,
-        tempEvening: 20,
+    { "Saturday":
+            {
+                tempMorning: 17,
+                tempDay: 25,
+                tempEvening: 20,
+            }
     },
-    { id: "Sunday",
-        tempMorning: 16,
-        tempDay: 26,
-        tempEvening: 21,
+    { "Sunday":
+            {
+                tempMorning: 16,
+                tempDay: 26,
+                tempEvening: 21,
+            }
     }
 ];
 
@@ -174,8 +204,11 @@ console.log(temperatureForecast);
 let x = +prompt("Введіть число...");
 if (x !== 0) {
     console.log('Вірно');
+}else {
     console.log('Невірно');
 }
+
+console.log( x !== 0  ? 'Вірно' : 'Невірно' );
 
 // - Дано змінну time яка рівна числу від 0 до 59. Потрібно написати код, який перевірить, до якої четверті години попадає
 // число
@@ -195,18 +228,23 @@ if (time >= 30 && time < 45) {
 if (time >=45 && time < 60) {
     console.log("четверта частина години");
 }
+if(!!!time || time > 60 || time < 0) {
+    console.log("Невірно");
+}
 
 
 // - У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину(декаду) місяця потрапляє це число
 // (у першу, другу чи третю).
 
 const day = +prompt("Ввести число від 1 до 31");
-if (day<=10) {
+if (day > 0 && day <= 10) {
     console.log("Перша декада місяця");
-} else if (day>10 && day<=20) {
+} else if (day > 10 && day <= 20) {
     console.log("Друга декада місяця");
-} else {
+} else if (day > 20 && day <= 31)  {
     console.log("Третя декада місяця");
+}else {
+    console.log('false');
 }
 
 
@@ -261,22 +299,24 @@ if (firstNum > secondNum ) {
 //         тобто ті, які приводиться до false, а це 0 null undefined і тд).
 
 
-x = 0;
+x = false;
 if (!!x) {
-    console.log(true);
+    console.log(x);
 } else {
-    console.log(false);
+    console.log("default");
 }
 
 x = "";
 switch (!!x) {
     case true :
-        console.log('true');
+        console.log(x);
         break;
     default:
-        console.log('false');
+        console.log("default");
 }
 
+x = 0;
+console.log(x = !!x ? x : "default");
 
 //     - з файлу arrays.js (лежить в папці 2023 plan ) взяти масив coursesAndDurationArray. За допомоги іф перевірити кожен
 //     його елемент на тривалість навчання. У випадку якщо тривалість довша за 5 місяців вивести в консоль "Супер".
