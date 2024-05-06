@@ -230,9 +230,6 @@ let usersList = [
         }
     }
 ];
-
-
-
 /*За допомогою циклу вивести всю інформацію про користувачів використовуючи шаблон Template 1.1
 * за допомоги стилів, побудувати сітку по 2 об'єкта в лінію
 *
@@ -256,7 +253,6 @@ let usersList = [
 //     other users
 //     -->
 // </div>
-
 document.write(`<div class="users-box">`);
 for (const user of usersList) {
     console.log(user);
