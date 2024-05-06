@@ -7,7 +7,7 @@ for ( let i = 0; i < 10; i++){
 
 // - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині
 
-for ( let i = 0; i <= 10; i++){
+for ( let i = 1; i <= 10; i++){
     let blokFor = `<div id=${i+1} style="background-color:powderblue; border:1px solid black; padding: 10px"> Have a nice day! ${i}</div>`
     document.write(blokFor);
 }
@@ -38,7 +38,7 @@ while (k <= 20){
 // побудувати структуру по шаблону
 // Масив:
 //
-  let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
+  let listOfItems = ['html','css','javascript','mysql','mongodb','react','angular','node.js'];
 //
 // ШАБЛОН:
 //     <ul>
@@ -52,10 +52,18 @@ while (k <= 20){
 //     </ul>
 //
 // замість 'ITEM OF ARRAY' підставити елемент з масиву щоб получився цілий список з даними з масиву
+
+document.write(`<ol>`);
+for ( let element of listOfItems) {
+    document.write(`<li> ${element} </li>`);
+}
+document.write(`</ol>`);
+
 document.write(`<ul>`);
 let i = 0;
 while (i < listOfItems.length) {
-    document.write(`<li> ${listOfItems[i]} <li/>`)
+    console.log(`<li> ${listOfItems[i]} </li>`);
+    document.write(`<li> ${listOfItems[i]} </li>`);
     i++;
 }
 document.write(`</ul>`);
@@ -126,23 +134,20 @@ document.write(`<div style="background-color:powderblue; border:1px solid black;
 document.write(`<div> <h3>True</h3>`);
 for (const user of users) {
     if (user["status"] === true) {
-        console.log(user);
-        document.write(`<p>${user.name} ${user.age} ${user.status}</p>    `);
-    }
-}
-document.write(`</div>`);
-document.write(`<div <h3>False</h3>`);
-for (const user of users) {
-    if (user["status"] === false) {
-        console.log(user);
         document.write(`<p>${user.name} ${user.age} ${user.status}</p>`);
     }
 }
 document.write(`</div>`);
-document.write(`<div <h3>More 30</h3>`);
+document.write(`<div><h3>False</h3>`);
+for (const user of users) {
+    if (user["status"] === false) {
+        document.write(`<p>${user.name} ${user.age} ${user.status}</p>`);
+    }
+}
+document.write(`</div>`);
+document.write(`<div><h3>More 30</h3>`);
 for (const user of users) {
     if (user["age"] > 30) {
-        console.log(user);
         document.write(`<p>${user.name} ${user.age} ${user.status}</p>`);
     }
 }
