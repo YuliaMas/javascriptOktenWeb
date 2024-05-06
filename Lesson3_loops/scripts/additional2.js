@@ -253,7 +253,7 @@ let usersList = [
 //     other users
 //     -->
 // </div>
-document.write(`<div class="users-box">`);
+document.write(`<div class="users-box" style="display: grid; grid-template-columns: auto auto">`);
 for (const user of usersList) {
     console.log(user);
     document.write(`

@@ -618,7 +618,7 @@ const usersPosts = [
 //     -->
 // </div>
 
-document.write(`<div class="wrap">`);
+document.write(`<div class="wrap" style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr">`);
 for ( const  userPost of usersPosts ) {
   document.write(`   
         <div class="post-card">
