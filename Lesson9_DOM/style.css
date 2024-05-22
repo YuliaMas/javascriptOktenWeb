@@ -1,0 +1,26 @@
+.member {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+main {
+    border: 2px solid red;
+}
+main div {
+    border: 1px solid black;
+}
+.title {
+    text-align: center;
+}
+.duration {
+    display: inline-block;
+    margin-left: 50px;
+    width: 30vw;
+}
+.duration:last-child {
+    width: 70vw;
+}
+ul > li {
+    font-size: 18px;
+    margin-left: 50px;
+}
