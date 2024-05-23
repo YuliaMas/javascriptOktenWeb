@@ -240,18 +240,18 @@ for (const obj of coursesArray) {
     h1.classList.add('title');
     let h2 = document.createElement('h2');
     h2.classList.add('duration');
-    let h2next = document.createElement('h2');
-    h2next.classList.add('duration');
+    let h2Next = document.createElement('h2');
+    h2Next.classList.add('duration');
     let ul = document.createElement('ul');
-        h1.innerText = (`Course: ${obj.title}`);
-        h2.innerText = (`Duration: ${obj.monthDuration} months`);
-        h2next.innerText = (`or :   ${obj.hourDuration} hours`);
+        h1.innerText = (`${obj.title}`);
+        h2.innerText = (`${obj.monthDuration} months`);
+        h2Next.innerText = (`${obj.hourDuration} hours`);
         for (const item of obj.modules) {
             let li = document.createElement('li');
             li.innerText = item;
             ul.appendChild(li);
         }
-    div.append(h1, h2, h2next , ul);
+    div.append(h1, h2, h2Next , ul);
     main.appendChild(div);
 }
 document.body.appendChild(main);

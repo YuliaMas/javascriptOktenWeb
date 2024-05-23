@@ -5,6 +5,8 @@
 }
 main {
     border: 2px solid red;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 main div {
     border: 1px solid black;
@@ -12,14 +14,19 @@ main div {
 .title {
     text-align: center;
 }
+
+h2 {
+    text-align: center;
+    width: 60%;
+}
 .duration {
     display: inline-block;
-    margin-left: 50px;
-    width: 30vw;
+    width: 40%;
 }
-.duration:last-child {
-    width: 70vw;
+main.div > h2.duration {
+    width: 30%;
 }
+
 ul > li {
     font-size: 18px;
     margin-left: 50px;
