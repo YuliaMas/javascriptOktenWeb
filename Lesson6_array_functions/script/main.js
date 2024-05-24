@@ -184,6 +184,42 @@ let getSuitCards = cardSuits.reduce((acc , card) => {
     return acc;
 }, [{}]);
 console.log(getSuitCards);
+
+let cardSuit = ['spade', 'diamond','heart', 'clubs']
+let values1 = ['6','7','8','9','10', 'ace','jack','queen','king']
+let colors1 = {
+    spade: 'black',
+    clubs: 'black',
+    diamond: 'red',
+    heart: 'red'
+};
+let allCards = [];
+cardSuit.forEach(cardSuit => {
+    values1.forEach(value => {
+        allCards.push({
+            cardSuit: cardSuit,
+            value: value,
+            color: colors1[cardSuit]
+        });
+    });
+});
+console.log(allCards);
+
+let reduce = koloda.reduce((distributor, card) => {
+    console.log(card);
+    if (card.cardSuit === 'spade') {
+        distributor.spades.push(card);
+    } else if (card.cardSuit === 'diamond') {
+        distributor.diamonds.push(card);
+    } else if (card.cardSuit === 'heart'){
+        distributor.hearts.push(card);
+    } else if (card.cardSuit === 'clubs') {
+        distributor.clubs.push(card);
+    }
+    return distributor;
+}, {spades: [], diamonds: [], hearts: [], clubs: []});
+console.log(reduce);
+
 // =========================
 
 //   11 -  взяти з arrays.js (який лежить в папці 2023 plan) масив coursesArray
