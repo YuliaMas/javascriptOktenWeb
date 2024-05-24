@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    text-align: center;
+    background-color: cornflowerblue;
+    overflow-x: hidden;
+}
+main {
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    flex-wrap: wrap;
+    margin: 0 auto ;
+}
+.card-wrapper {
+    border: 3px solid ghostwhite;
+    border-radius: 20px;
+    padding: 20px 0;
+}
+.genre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    width: 96%;
+    justify-items: stretch;
+    align-items: stretch;
+    margin: 0 auto;
+}
+p {
+    color: antiquewhite;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+}
+footer {
+    margin: 20px 0;
+}
