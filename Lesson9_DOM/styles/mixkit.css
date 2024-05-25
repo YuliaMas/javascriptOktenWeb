@@ -9,8 +9,9 @@ body {
 main {
     width: 90vw;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-column-gap: 6px;
+    grid-row-gap:6px;
     flex-wrap: wrap;
     margin: 0 auto ;
 }
@@ -21,12 +22,12 @@ main {
 }
 .genre {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-column-gap: 6px;
     flex-wrap: wrap;
     width: 96%;
     justify-items: stretch;
-    align-items: stretch;
+    align-items: start;
     margin: 0 auto;
 }
 p {
