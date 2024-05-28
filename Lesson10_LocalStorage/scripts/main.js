@@ -125,7 +125,7 @@ tableBtn.addEventListener('click', function (e) {
     console.log(numRow);
     let numColumn = columnInput.value;
     let textValue = tableTextInput.value;
-    const splitText = textValue.split("/");
+    // const splitText = textValue.split("/");
     console.log(textValue);
     let table = document.createElement('table');
     const tblBody = document.createElement("tbody");
@@ -134,8 +134,9 @@ tableBtn.addEventListener('click', function (e) {
         let row = document.createElement('tr');
         for (let j = 0; j < numColumn; j++) {
             let column = document.createElement('td');
-            let text = document.createTextNode(splitText[j]);
-            column.appendChild(text);
+            column.innerText = textValue;
+            // let text = document.createTextNode(splitText[j]);
+            // column.appendChild(textValue);
             row.appendChild(column);
         }
         tblBody.appendChild(row);
