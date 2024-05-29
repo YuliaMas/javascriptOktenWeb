@@ -1,0 +1,43 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+}
+p {
+    margin: 5px;
+}
+img {
+    width: 350px;
+}
+.recipes{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 2fr));
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+.carts {
+    margin: 2px;
+    display: grid;
+    grid-template-rows: repeat(auto-fill, 1fr);
+}
+.carts img {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    width: 180px;
+    height: 200px;
+}
+.cart {
+    border: 2px solid gray;
+    margin-bottom: 5px ;
+}
+.cart p.product {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 0 10px;
+}
+.products {
+    border: 2px solid blueviolet;
+}
