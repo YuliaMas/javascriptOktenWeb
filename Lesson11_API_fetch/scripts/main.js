@@ -80,26 +80,3 @@ fetch(requestUrl2).then(res => res.json()).then(({recipes}) => {
     })
     document.body.appendChild(div);
 });
-
-//  3.   - зробити файл users.html
-// з ендпоінту http://jsonplaceholder.typicode.com/users отримати всіх користувачів
-//     вивести їх id + name списком та додати посилання з href = user-details.html?id=XXX (замість ХХХ - айді юзера)
-// при кліку на посилання перехід на відповідну сторінку, на якій буде вся інформація про користувача (всі 15 полів)
-// отримана через додатковий запит (https://jsonplaceholder.typicode.com/users/XXX   де ХХХ - айді користувача)
-
-let baseUrl3 = 'http://jsonplaceholder.typicode.com';
-let requestUrl3 =  baseUrl3 +  '/users';
-function users(response) {
-    console.log(response);
-    for (const responseEl of response) {
-        console.log("id: " + responseEl.id + " , " + "name: " + responseEl.name);
-        let ul = document.createElement('ul');
-        let li = document.createElement('li');
-        li.innerText = "id: " + responseEl.id + " , " + "name: " + responseEl.name;
-        ul.appendChild(li);
-        document.body.appendChild(ul);
-    }
-}
-fetch(requestUrl3).then(res => res.json()).then(response => {
-    users(response);
-});
