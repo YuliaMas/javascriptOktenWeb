@@ -7,9 +7,46 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./styles/style.css">
     <title>Lesson 11 - API fetch</title>
+    <style>
+        #scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 24px;
+            width: 64px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: #8a00ffc4;
+            color: #dccece;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            display: none;
+            transition: all 0.9s ease-in-out;
+            box-shadow: #ff1600 0 0 5px;
+        }
+    </style>
 </head>
 <body>
+    <button onclick="scrollToTop()" id="scroll-to-top">
+        Back <br />to Top
+    </button>
+    <script>
+        window.addEventListener("scroll", function () {
+            const button = document.querySelector("#scroll-to-top");
+            if (window.scrollY > 100) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        });
 
-<script src="./scripts/main.js"></script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
+    <script src="./scripts/main.js"></script>
 </body>
 </html>
