@@ -40,7 +40,12 @@ const book_Da_Vinci_Code= {
     title: "The Da Vinci Code",
     pageCount: 689,
     genre: " thriller",
-    authors: [ {name : "Den Braun"}, { age: 60} ]
+    authors: [
+        {
+            name : "Den Braun",
+            age: 60
+        }
+    ]
 }
 
 // - Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre, authors. Поле "автори" -
@@ -192,6 +197,7 @@ const temperatureForecast = [
                 tempEvening: 21,
             }
     }
+    // { day: "Sunday", values: { tempMorning: 16, tempDay: 26, tempEvening: 21 } }
 ];
 
 console.log(temperatureForecast);
@@ -199,7 +205,7 @@ console.log(temperatureForecast);
 // Логічні розгалуження:
 //     - Є змінна х, якій ви надаєте довільне числове значення.
 //     Якщо змінна x не дорівнює нулю, виведіть 'Вірно', інакше виведіть 'Невірно'. Перевірте  скрипт при a, що дорівнює
-// 1, 0, -3
+//     1, 0, -3
 
 let x = +prompt("Введіть число...");
 if (x !== 0) {
